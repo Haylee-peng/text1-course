@@ -1,0 +1,16 @@
+title: text1
+description: 练手
+template:
+  repo: text1-template
+  name: text1
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
